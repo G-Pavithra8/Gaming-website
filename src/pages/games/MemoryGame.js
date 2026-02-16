@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 const MemoryGame = () => {
@@ -10,25 +10,27 @@ const MemoryGame = () => {
 
   const emojis = ['🎮', '🎯', '🎲', '🎨', '🎪', '🎭', '🎬', '🎤'];
 
-  useEffect(() => {
+useEffect(() => {
   initializeGame();
 }, [initializeGame]);
 
 
-  const initializeGame = () => {
-    const cardPairs = [...emojis, ...emojis];
-    const shuffled = cardPairs.sort(() => Math.random() - 0.5);
-    const initialCards = shuffled.map((emoji, index) => ({
-      id: index,
-      emoji,
-      flipped: false,
-    }));
-    setCards(initialCards);
-    setFlippedCards([]);
-    setMatchedCards([]);
-    setMoves(0);
-    setGameWon(false);
-  };
+  const initializeGame = useCallback(() => {
+  const cardPairs = [...emojis, ...emojis];
+  const shuffled = cardPairs.sort(() => Math.random() - 0.5);
+  const initialCards = shuffled.map((emoji, index) => ({
+    id: index,
+    emoji,
+    flipped: false,
+  }));
+
+  setCards(initialCards);
+  setFlippedCards([]);
+  setMatchedCards([]);
+  setMoves(0);
+  setGameWon(false);
+}, [emojis]);
+
 
   const handleCardClick = (cardId) => {
     if (flippedCards.length === 2 || matchedCards.includes(cardId)) return;
