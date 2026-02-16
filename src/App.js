@@ -15,6 +15,10 @@ import MemoryGame from './pages/games/MemoryGame';
 import GuessNumber from './pages/games/GuessNumber';
 import RockPaperScissors from './pages/games/RockPaperScissors';
 import './App.css';
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+
+
 
 
 function App() {
@@ -51,6 +55,10 @@ function App() {
           <Route path="/game/memory" element={<PrivateRoute><MemoryGame /></PrivateRoute>} />
           <Route path="/game/guessnumber" element={<PrivateRoute><GuessNumber /></PrivateRoute>} />
           <Route path="/game/rockpaperscissors" element={<PrivateRoute><RockPaperScissors /></PrivateRoute>} />
+          <Route path="/privacy" element={<Privacy />} />
+<Route path="/terms" element={<Terms />} />
+
+
         </Routes>
       </main>
       {!isGamePage && <Footer />}
