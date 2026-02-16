@@ -19,9 +19,33 @@ const Footer = () => {
             </p>
 
             <div className="flex gap-4 mt-5">
-              <a className="hover:text-cyan-400 transition-colors" href="#">Facebook</a>
-              <a className="hover:text-cyan-400 transition-colors" href="#">Twitter</a>
-              <a className="hover:text-cyan-400 transition-colors" href="#">Instagram</a>
+              <a 
+  href="https://facebook.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="hover:text-cyan-400 transition-colors"
+>
+  Facebook
+</a>
+
+<a 
+  href="https://twitter.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="hover:text-cyan-400 transition-colors"
+>
+  Twitter
+</a>
+
+<a 
+  href="https://instagram.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="hover:text-cyan-400 transition-colors"
+>
+  Instagram
+</a>
+
             </div>
           </div>
 
@@ -105,7 +129,7 @@ const Footer = () => {
 
             <div className="flex gap-6 text-sm text-gray-500">
              <Link to="/privacy">Privacy Policy</Link>
-<Link to="/terms">Terms of Service</Link>
+            <Link to="/terms">Terms of Service</Link>
 
 
             </div>

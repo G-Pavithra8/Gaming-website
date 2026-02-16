@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback} from 'react';
 import { Link } from 'react-router-dom';
 
 const Snake = () => {
@@ -19,7 +19,8 @@ const Snake = () => {
     return newFood;
   };
 
-  const moveSnake = () => {
+  const moveSnake = useCallback(() => {
+
     if (gameOver || isPaused) return;
 
     setSnake((prevSnake) => {
@@ -51,13 +52,15 @@ const Snake = () => {
       }
 
       return newSnake;
-    });
-  };
+     });
+}, [direction, gameOver, isPaused, food]);
+
 
   useEffect(() => {
     const gameInterval = setInterval(moveSnake, gameSpeed);
     return () => clearInterval(gameInterval);
-  }, [direction, gameOver, isPaused, food]);
+  }, [moveSnake]);
+
 
   useEffect(() => {
     const handleKeyPress = (e) => {

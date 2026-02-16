@@ -11,8 +11,9 @@ const MemoryGame = () => {
   const emojis = ['🎮', '🎯', '🎲', '🎨', '🎪', '🎭', '🎬', '🎤'];
 
   useEffect(() => {
-    initializeGame();
-  }, []);
+  initializeGame();
+}, [initializeGame]);
+
 
   const initializeGame = () => {
     const cardPairs = [...emojis, ...emojis];
