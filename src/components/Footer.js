@@ -111,7 +111,7 @@ const Footer = () => {
                 Email: <span className="text-white">support@crazygame.com</span>
               </li>
               <li>
-                Phone: <span className="text-white">+91 98765 43210</span>
+                Phone: <span className="text-white">+91 90*** *****</span>
               </li>
               <li>
                 Location: <span className="text-white">Online Gaming Platform</span>

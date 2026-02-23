@@ -159,23 +159,10 @@ const Contact = () => {
             </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="space-y-4">
-              <div className="bg-black/50 rounded-lg p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                <p className="text-gray-300">info@crazygame.com</p>
-              </div>
-              <div className="bg-black/50 rounded-lg p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
-                <p className="text-gray-300">+1 (555) 123-4567</p>
-              </div>
-              <div className="bg-black/50 rounded-lg p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
-                <p className="text-gray-300">123 Gaming Street<br />Digital City, DC 12345</p>
-              </div>
-            </div>
+          <div className="mb-8 flex justify-center">
+            
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-2xl mx-aut">
               <div>
                 <label className="block text-gray-300 text-sm font-medium mb-2">
                   Your Name
