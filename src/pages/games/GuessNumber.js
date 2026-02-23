@@ -57,7 +57,7 @@ const GuessNumber = () => {
     <div 
       className="min-h-screen py-20 px-4 relative"
       style={{
-        backgroundImage: `url('https://play-lh.googleusercontent.com/zPxLgj5nvl20ahJV7aFC6S5mD8kii5CEEDj25j1P9CYAfXL9sdDuO-8eES0r4DhJHrU')`,
+        backgroundImage: `url('https://i.pinimg.com/474x/99/d9/23/99d9239aafdc5dd180eeae9bc30dcc6a.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -157,12 +157,7 @@ const GuessNumber = () => {
                 New Game
               </button>
             )}
-            <Link
-              to="/"
-              className="bg-transparent border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold px-8 py-3 rounded-lg transition-all transform hover:scale-105 text-center w-full sm:w-auto"
-            >
-              Back to Home
-            </Link>
+            
           </div>
         </div>
       </div>

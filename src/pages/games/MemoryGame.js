@@ -71,7 +71,16 @@ const MemoryGame = () => {
   };
 
   return (
-    <div className="min-h-screen py-20 px-4 relative">
+    <div 
+      className="min-h-screen py-20 px-4 relative"
+      style={{
+        backgroundImage: `url('https://ghost-cms.s3.ap-south-1.amazonaws.com/2024/02/memory-boosting-games_truworth-wellness.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="bg-black/80 rounded-2xl p-8">
           <div className="text-center mb-8">
